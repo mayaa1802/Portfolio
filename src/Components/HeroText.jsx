@@ -8,6 +8,7 @@
 */
 
 import { m, LazyMotion, domAnimation } from "framer-motion";
+import {ReactTyped} from "react-typed";
 
 const HeroText = () => {
   const name = "bl33h ?";
@@ -23,21 +24,21 @@ const HeroText = () => {
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, type: "spring" }}
           className="text-center flex justify-center items-center flex-col opacity-100 text-7xl sm:text-9xl cursor-default"
-          style={{ fontFamily: "SuperMario" }}
+          style={{ fontFamily: "Poppins" }}
         >
           <m.span
             initial={{ x: -100 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 0.6, type: "spring" }}
           >
-            Who's{" "}
+            I'm{" "}
           </m.span>
           <m.div
             initial={{ x: 100 }}
             whileInView={{ x: 0 }}
             transition={{ duration: 0.6, type: "spring" }}
           >
-            {name.split("").map((char, index) => {
+            {/* {name.split("").map((char, index) => {
               if (char === " ") {
                 return " ";
               }
@@ -50,7 +51,14 @@ const HeroText = () => {
                   {char}
                 </span>
               );
-            })}
+            })} */}
+            <ReactTyped
+              strings={["Business Analyst", "Consultant", "Business Designer"]}
+              typeSpeed={100}
+              loop
+              backSpeed={20}
+              showCursor={true}
+            />
           </m.div>
         </m.h1>
       </LazyMotion>

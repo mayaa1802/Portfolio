@@ -102,7 +102,7 @@ export const slideIn = (direction, type, delay, duration) => {
   };
 };
 
-const SectionWrapper = (Component, idName) => 
+const SectionWrapper = (Component, idName) =>
   function HOC() {
     return (
       <motion.section
@@ -133,15 +133,15 @@ const SectionWrapper = (Component, idName) =>
             speed: 450
           }}
           className='text-grayscale-50 p-5 rounded-lg sm:w-[280px] w-full'
-          style={{ marginTop: '-120%' }}
+
           >
           <div
             className="relative w-full h-[180px]"
           >
-            <img 
+            <img
               src={image}
               alt={name}
-              className="w-full h-full object-cover rounded-lg"
+              className="w-full h-[70%] object-cover rounded-lg"
             />
             <div
               className="absolute inset-0 flex justify-end m-3 card-img_hover"
@@ -151,7 +151,7 @@ const SectionWrapper = (Component, idName) =>
                 (source_code_link, "_blank")}
                 className="black-gradient w-8 h-8 rounded-full flex justify-center items-center cursor-pointer"
               >
-               <img 
+               <img
                 src={githubIcon}
                 alt="github"
                 className="w-15 h-15 object-contain"
@@ -159,7 +159,7 @@ const SectionWrapper = (Component, idName) =>
               </div>
             </div>
           </div>
-  
+
           <div className="mt-3">
             <h3 className="text-white font-bold text-[20px]">{name}</h3>
             <p className="mt-2 text-secondary text-[14px] leading-[18px]">{description}</p>
@@ -168,21 +168,10 @@ const SectionWrapper = (Component, idName) =>
             className="mt-2 flex flex-wrap gap-1"
           >
           </div>
-          <div 
-            className="mt-3 flex justify-center items-center"
-          >
-            <a 
-              className="shadow-md shadow-primary m-3 p-2 bg-tertiary w-[60%] rounded-lg flex justify-center"
-              href={demo_link}
-              target='_blank'
-            >
-              See the Demo
-            </a>
-          </div>
         </Tilt>
       </motion.div>
     )
-  }  
+  }
 
 const Works = () => {
   return (
@@ -195,9 +184,9 @@ const Works = () => {
         </motion.p>
       </div>
 
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-1 flex flex-wrap gap-7">
         {projects.map((project, index) => (
-          <ProjectCard 
+          <ProjectCard
             key={`project-${index}`}
             index={index}
             {...project}
